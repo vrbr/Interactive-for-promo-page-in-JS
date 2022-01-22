@@ -1,8 +1,11 @@
 const links = document.querySelectorAll('.header-menu__item a');
+const linkCharacteristics = document.querySelector('.card-details__link-characteristics');
+
+const newArray = [...links, linkCharacteristics];
 
 seamless.polyfill();
 
-links.forEach((link) => {
+newArray.forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
     
